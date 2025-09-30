@@ -5,8 +5,8 @@ function ContactUs() {
     return (
         <>
             <Navbar />
-            <div>
-                hello
+            <div className="w-screen h-screen justify-center items-center flex">
+                Contact Us Page
             </div>
         </>
     )

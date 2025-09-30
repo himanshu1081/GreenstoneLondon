@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './pages/Home';
-import Aboutus from './pages/Aboutus';
-import ContactUs from './pages/Contactus';
+import Home from './pages/Home.jsx';
+import AboutUs from './pages/AboutUs.jsx';
+import ContactUs from './pages/ContactUs.jsx'
 
 function App() {
   const router = createBrowserRouter([
@@ -11,7 +11,7 @@ function App() {
     },
     {
       path: "/about-us",
-      element: <Aboutus />,
+      element: <AboutUs />,
     },
     {
       path: "/contact-us",
