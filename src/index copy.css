@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import "video.js/dist/video-js.css";
+
+
+@font-face {
+  font-family: 'Mooxy';
+  src: url('/fonts/mooxy.ttf')
+}
+
+
+@font-face {
+  font-family: 'Aonic-Medium';
+  src: url('/public/fonts/Aonic-Medium.ttf');
+}
+
+@font-face {
+  font-family: Vcr;
+  src: url('/fonts/VCR_OSD_MONO_1.001.ttf');
+  font-display: swap;
+}
+
+@theme {
+  --font-vcr: Vcr, "sans-serif"
+}
+
+@theme {
+  --font-inter: Inter, "sans-serif"
+}
+
+@theme {
+  --font-figtree: Figtree, 'sans-serif';
+}
+
+@import "tailwindcss";
+@import "tailwindcss/preflight.css" layer(base);
+
+
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 9999px;
+  border: 2px solid #f1f1f1;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.mesh {
+  background: radial-gradient(at 12.887930870056152% 80.9166665871938%, #230444 0px, transparent 50%), radial-gradient(at 37.241379145918216% 11.124998728434244%, #6613c8 0px, transparent 50%), radial-gradient(at 80.88362052522857% 35.91666658719381%, #5d098f 0px, transparent 50%), radial-gradient(at 78.18965500798718% 91.95833365122478%, #ad5cf2 0px, transparent 50%), #230444;
+
+}
+
+.meshdark {
+  background: radial-gradient(at 18.383620525228565% 74.87500031789143%, #21033c 0px, transparent 50%), radial-gradient(at 86.48706880109064% 15.708333651224773%, #4d2e4d 0px, transparent 50%), radial-gradient(at 79.59051707695271% 74.0416669845581%, #260c40 0px, transparent 50%), radial-gradient(at 19.67672397350443% 20.083332061767578%, #300d30 0px, transparent 50%), #230444;
+}
+
+.wait{
+  background-image: url("../public/assets/bg-image-wait2.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+@theme {
+  --breakpoint-xs: 30rem;
+}
