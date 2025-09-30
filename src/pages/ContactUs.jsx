@@ -1,7 +1,7 @@
 import Navbar from "../Components/Navbar";
 
 
-function Contactus() {
+function ContactUs() {
     return (
         <>
             <Navbar />
@@ -12,4 +12,4 @@ function Contactus() {
     )
 }
 
-export default Contactus;
+export default ContactUs;
