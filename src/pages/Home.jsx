@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar";
 import Box from "../Components/Box";
 import Features from "../Components/Features";
+import { useNavigate } from "react-router-dom";
 
 //icons
 import { FaShieldHeart } from "react-icons/fa6";
@@ -9,6 +10,8 @@ import { FaRegHeart } from "react-icons/fa6";
 import { SlBadge } from "react-icons/sl";
 
 function Home() {
+
+    const navigate = useNavigate();
 
     const fakeBoxes = [
         {
@@ -135,10 +138,10 @@ function Home() {
                             </p>
                         </div>
                         <div className="flex gap-2 text-center">
-                            <div className="bg-[#15a349] p-2 rounded-md text-white border-b w-32">
+                            <div className="bg-[#15a349] p-2 rounded-md text-white border-b w-32 cursor-pointer" onClick={() => navigate('/contact-us')}>
                                 Contact Us
                             </div>
-                            <div className=" p-2 rounded-md text-black border-1 border-black/20 w-32">
+                            <div className=" p-2 rounded-md text-black border-1 border-black/20 w-32 cursor-pointer hover:text-white hover:bg-[#15a349] transition-all ease-in">
                                 Become a Host
                             </div>
                         </div>

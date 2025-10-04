@@ -1,37 +1,34 @@
 import { IoStar } from "react-icons/io5";
 
 function Box({ image, name, description, price, place, rating }) {
-    return (
-        <>
-            <div
-                className="bg-[#d9ffe8] transition-all ease-in-out w-auto h-90 max-w-80 lg:max-w-60 lg:w-600 xl:max-w-80  rounded-md flex flex-col items-center justify-start p-5 hover:bg-[#47ef85] font-figtree">
-                <img
-                    src={image} alt="location-image"
-                    className="h-50 w-60 rounded-lg object-cover " />
-                <div className="flex items-center justify-between w-full">
-                    <div className="font-bold">
-                        {name}
-                    </div>
-                    <div className="font-bold whitespace-nowrap flex justify-center items-center">
-                        <IoStar color="gold" />
-                        {rating}
-                    </div>
-                </div>
-                <div className="font-figtree text-gray-600">
-                    {description}
-                </div>
-                <div
-                    className="flex flex-col items-center justify-start w-full">
-                    <div>
-                        {place}
-                    </div>
-                    <div className="whitespace-nowrap font-bold">
-                        £{price}/night
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="bg-[#d9ffe8] hover:bg-[#47ef85] transition duration-300 ease-in-out rounded-xl shadow-md overflow-hidden w-full max-w-xs lg:max-w-sm flex flex-col font-figtree">
+      <div className="overflow-hidden rounded-t-xl">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-48 object-cover transform hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      <div className="p-4 flex flex-col gap-3">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-bold text-gray-800">{name}</h3>
+          <div className="flex items-center gap-1 font-semibold text-gray-700">
+            <IoStar color="gold" />
+            {rating}
+          </div>
+        </div>
+
+        <p className="text-gray-600 text-sm line-clamp-3">{description}</p>
+
+        <div className="mt-2 flex items-center justify-between">
+          <span className="text-gray-800 font-medium">{place}</span>
+          <span className="text-gray-900 font-bold">£{price}/night</span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Box;
